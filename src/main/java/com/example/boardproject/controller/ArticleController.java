@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ArticleController {
-    @Autowired // 스프링 부트가 미리 생성해놓은 객체를 가져다가 자동 연결
+    @Autowired // 스프링 부트가 미리 생성해놓은 객체를 가져다가 자동 연결, 객체 주입
     private ArticleRepository articleRepository;
     @GetMapping("/articles/new")
     public String newArticleForm(){
