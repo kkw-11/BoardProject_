@@ -7,9 +7,8 @@ import javax.persistence.Id;
 
 @Entity //DB가 해당객체를 인식 하게 해줌
 public class Article {
-
     @Id
-    @GeneratedValue
+    @GeneratedValue //ID값이 1,2,3 자동 생성하게 해주는 기능
     private Long id;
 
     @Column
@@ -23,7 +22,6 @@ public class Article {
         this.title = title;
         this.content = content;
     }
-
 
     @Override
     public String toString() {
