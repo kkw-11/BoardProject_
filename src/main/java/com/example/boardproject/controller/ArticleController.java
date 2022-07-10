@@ -43,7 +43,7 @@ public class ArticleController {
     @GetMapping("/articles/{id}")
     public String showArticle(@PathVariable Long id, Model model){
         log.info("id = " + id);
-        // 1: id로 데이터를 가져옴
+        // 1: id로 데이터를 가져옴, Entity에 저장
         Article articleEntity = articleRepository.findById(id).orElse(null);
 
         // 2: 가져온 데이터를 모델에 등록
