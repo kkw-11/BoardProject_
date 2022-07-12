@@ -14,6 +14,7 @@ import javax.persistence.Id;
 @ToString
 @NoArgsConstructor // defalut constructor
 public class Article {
+
     @Id
     @GeneratedValue //ID값이 1,2,3 자동 생성하게 해주는 기능
     private Long id;
@@ -22,6 +23,5 @@ public class Article {
     private String title;
     @Column
     private String content;
-
 
 }

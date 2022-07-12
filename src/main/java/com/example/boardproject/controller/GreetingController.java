@@ -22,7 +22,6 @@ public class GreetingController {
     }
 
 
-
     @GetMapping("/hello-api")
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name){
