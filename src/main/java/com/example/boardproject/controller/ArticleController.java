@@ -10,6 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 @Slf4j // Loggin Annotation
 public class ArticleController {
@@ -52,4 +56,21 @@ public class ArticleController {
         // 3: 보여줄 페이지 설정
         return "articles/showArticle";
     }
+
+    @GetMapping("/articles")
+    public String index(){
+        // 1. 모든 Article을 가져온다!
+//        List<Article> articleEntityList = (List<Article>)articleRepository.findAll();
+//        Iterable<Article> articleEntityList = articleRepository.findAll();
+        ArrayList<Article> articleEntityList = articleRepository.findAll(); //method overriding 진행후 코드
+
+        // 2: 가져온 Article 묶음을 뷰로 전달!
+
+        // 3. 뷰 페이지 설정!
+
+        return "";
+    }
+
+
+
 }
