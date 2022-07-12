@@ -58,17 +58,17 @@ public class ArticleController {
     }
 
     @GetMapping("/articles")
-    public String index(){
+    public String index(Model model){
         // 1. 모든 Article을 가져온다!
-//        List<Article> articleEntityList = (List<Article>)articleRepository.findAll();
-//        Iterable<Article> articleEntityList = articleRepository.findAll();
-        ArrayList<Article> articleEntityList = articleRepository.findAll(); //method overriding 진행후 코드
+        List<Article> articleEntityList = articleRepository.findAll();
 
         // 2: 가져온 Article 묶음을 뷰로 전달!
+        model.addAttribute("articleList",articleEntityList);
+
 
         // 3. 뷰 페이지 설정!
 
-        return "";
+        return "articles/index";
     }
 
 
