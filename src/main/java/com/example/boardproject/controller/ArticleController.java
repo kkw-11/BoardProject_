@@ -40,7 +40,7 @@ public class ArticleController {
 //        System.out.println(savedArticle.toString());
         log.info(savedArticle.toString());
 
-        return "redirect:/";
+        return "redirect:/articles/"+savedArticle.getId();
     }
 
 

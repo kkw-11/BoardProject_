@@ -1,6 +1,7 @@
 package com.example.boardproject.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @ToString
 @NoArgsConstructor // defalut constructor
+@Getter
 public class Article {
 
     @Id
@@ -23,5 +25,9 @@ public class Article {
     private String title;
     @Column
     private String content;
+
+//    public Long getId(){
+//        return id;
+//    }
 
 }
