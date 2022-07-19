@@ -8,7 +8,7 @@ import lombok.ToString;
 @ToString
 public class ArticleForm {
 
-    private Long id;// id 필두 추가!!
+    private Long id;// id 필드 추가!!
     private String title;
     private String content;
 
