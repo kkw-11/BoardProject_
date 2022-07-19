@@ -80,5 +80,4 @@ public class ArticleController {
         return "articles/edit";
     }
 
-
 }
