@@ -44,7 +44,6 @@ public class ArticleController {
         return "redirect:/articles/"+savedArticle.getId();
     }
 
-
     @GetMapping("/articles/{id}")
     public String showArticle(@PathVariable Long id, Model model){
         log.info("id = " + id);
@@ -69,7 +68,6 @@ public class ArticleController {
         // 3. 뷰 페이지 설정!
         return "articles/index";
     }
-
     @GetMapping("/articles/{id}/edit")
     public String eidt(@PathVariable Long id, Model model){
         //수정할 데이터를 가져오기!
@@ -80,7 +78,6 @@ public class ArticleController {
 
         return "articles/edit";
     }
-
     @PostMapping("/articles/update")
     public String update(ArticleForm form){
         log.info(form.toString());
@@ -100,5 +97,4 @@ public class ArticleController {
         // 3: 수정 결과 페이지로 리다이렉트 한다.
         return "redirect:/articles/" + articleEntity.getId();
     }
-
 }
